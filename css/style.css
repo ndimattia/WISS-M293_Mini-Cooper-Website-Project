@@ -1,0 +1,254 @@
+/*
+CSS für Mini Seite SQ 4B
+Änderungsdatum: 21.03.2024
+Version: 3.0
+Author: Noè Di Mattia
+*/
+
+
+/*GENERELLE STYLINGS*/
+
+body {
+	font-family:verdana, sans-serif; 				/*Font von allen elementen im Body*/
+	color:#4c4c4c; 						/*Anthrazit Farbe für Body Text*/
+}
+
+#wrapper {
+	width: 80%;							/*Breite vom Wrapper muss immer 80% sein*/
+	margin: 0 auto;						/*Aussenabstand vom Wrapper ist Top und Bottom 0 und auf den Seiten automatisch (responsive)*/
+	padding: 0px;						/*Padding auf allen Seiten auf 0 stellen, um die Automatische Voreinstellung des Browsers zu umgehen*/
+	background-color: #FFFFFF;
+}
+
+h1 h2 {
+	font-family:"century gothic";	
+	color:#cc3333;
+}
+
+h1 {					
+	font-size:2em;						/*Schriftgrösse auf 2em*/	
+	font-weight:bold;					/*Schriftart auf Fett*/		
+}
+
+h2 {
+	font-size:1.6em;
+	color: #cc3333;
+}
+
+header{
+	background-image: url("../assets/hintergrund_1.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 400px;		
+}
+
+section img {
+	max-width: 100%;					/*Maximale breite*/
+	height: auto;
+}
+
+
+
+/* NAVIGATIONS STYLING */
+
+/*Ganzes Navigations Element*/
+nav ul {
+	text-align: right; 					/*Text Rechtsbündig machen*/
+	list-style: none;					/*Bulletpoints entfernen*/
+}
+
+/*Navigations Liste Styling*/
+nav ul li {
+	border:3px solid transparent; 		/*Transparente Border zu listen hinzufügen, damit sie nicht herum rutschen, wenn drüber gehovert wird*/
+	display:inline-block; 				/*Liste Horizontal ausrichten*/
+	padding: 5px 10px 5px 0;			/*Innenabstand*/
+	margin-right:10px;						/*Aussenabstand*/
+}
+
+/*Darstellung der links*/
+nav ul li a {
+	text-decoration: none;				/*Unterstrich entfernen*/
+	color:#4c4c4c;						/*Link Farbe Grau*/
+	font-weight: bold;					/*Fetter Text*/
+	text-transform: uppercase;			/*Grossbuchstaben*/
+	font-size: 0.8em;					/*Text Grösse*/
+}
+
+/*Styling wenn der Mauszeiger auf einem Link ist*/
+nav ul li a:hover {
+	border-bottom: 2px solid #4c4c4c;	/*Rahmen in Schwarz anzeigen*/
+}
+
+/* aside styling */
+
+.newswrap {
+	display: flex;
+	flex-wrap: wrap; /* responsive */
+}
+
+.newswrap > * { /* responsive */
+	flex: 1 1 0%;
+}
+
+.box_wrap {
+	padding: 10px;
+	background: rgba(0,0,0,0.1);
+	margin: 5px;
+	border-radius: 5px;
+}
+
+/*Tabelle auf Preise.html*/
+#preistable {
+	width: 50%;
+	margin: 0	auto;	/*Zentrieren*/
+}
+
+table caption {
+	color: #cc3333;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#preistable, th, td {
+	padding: 10px;
+	border-style: dotted;		/*Rahmen ist gepunktet*/
+	border-color: #4c4c4c;
+	border-width: thin;			/*Dünner Rahmen*/
+	border-collapse: collapse;	/*Spalten fallen zusammen (keine abstände zwischen den zellen)*/
+}
+
+#preistable thead th{
+	font-weight: bold;
+	text-align: center;
+	background-color: rgba(0,0,0,0.1);
+}
+
+#preistable tfoot th {
+	font-weight: bold;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.1);	/*RGBA farbe -> Alphakanal auf 0.1*/
+}
+
+
+
+/*Form auf mitglieder.html*/
+#somfestform {
+	margin: 20px auto;
+}
+
+#somfestform fieldset {
+	border-style: dotted;
+	border-width: initial;
+	margin: 10px auto;
+}
+
+#somfestform fieldset legend{
+	font-weight: bold;
+	color: #cc3333;
+}
+
+#somfestform label {
+	width: 10em;
+}
+
+#somfestform input {
+	display: inline-block;
+}
+
+.buttonform {
+	display: inline-block;	/*Buttons werden zu inline-block elementen*/
+	float: left;			/*float left positioniert die block elemente nebeneinander*/
+	width: 50%;				
+}
+
+
+
+/*Platzierungen mit Float und Flex*/
+
+/*Mini Logo*/
+.fl_left {
+	float: left;
+	width: 15%;
+	padding-left: 10px;
+	margin-top: 15px;
+}
+
+/*h1*/
+.welcome {
+	float: right;
+	width: 80%;
+	color: #000000;
+	margin-top: 2%;
+	text-align: center;
+	text-shadow: 1px 1px #4c4c4c;
+}
+
+/*Ganze News*/
+.newswrap {
+	display: flex;
+		flex-wrap: wrap;
+}
+
+/*Children elemente von newswrap mit flex ansprechen*/
+.newswrap > * {
+	felx: 1 1 0%;
+}
+
+/*News Boxen*/
+.boxwrap {
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	margin: 5px;
+	border-radius: 5px; /*Abrundung der News Boxen*/
+}
+
+
+/*Atricles*/
+.one {
+	display: flex;
+	margin-bottom: 20px;
+	justify-content: space-between;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	flex-wrap: wrap;
+}
+
+.two {
+	display: flex;
+	margin-bottom: 20px;
+	justify-content: space-between;
+	border-radius: 5px;
+	flex-wrap: wrap;
+}
+
+.one > * {
+	flex: 1 1 20%;
+}
+
+.two > * {
+	flex: 1 1 20%;
+}
+
+.flex {
+	width: 60%;
+	margin-left: 20px;
+}
+
+article img {
+	max-width: 500px;
+	height: auto;
+}
+
+/*Media Querys*/
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+	header {
+		font-size: 0.7em;
+		height: 200px;
+	}
+
+	section img {
+		max-width: 100%;
+	}
+}
